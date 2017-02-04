@@ -1,0 +1,137 @@
+header {
+  font-size: 26px;
+  padding-left: 33px;
+  padding-top: 23px;
+  padding-bottom: 22px;
+}
+
+img {
+width: 1100px;
+height: 131px;
+}
+
+div {
+  text-align: center;
+  background-color: #EEEEEE;
+  width: 1100px;
+}
+
+div div{
+  text-align: left;
+}
+
+h3 {
+font-weight: 100;
+padding-top: 30px;
+font-size: 33px;
+font-family: 'Roboto Slab', serif;
+color: #484848
+}
+
+footer{
+background-color: #4B484F;
+padding-top: 70px;
+padding-bottom: 25px;
+color: #A1A0A5;
+font-size: 13px;
+}
+
+.relative{
+  position: relative;
+}
+
+.answer1-border-l{
+  position: absolute;
+  top: 219px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer2-border-l{
+  position: absolute;
+  top: 370px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer3-border-l{
+  position: absolute;
+  top: 590px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer4-border-l{
+  position: absolute;
+  top: 740px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer5-border-l{
+  position: absolute;
+  top: 1045px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer6-border-l{
+  position: absolute;
+  top: 1978px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer1-border-r{
+  position: absolute;
+  top: 219px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer2-border-r{
+  position: absolute;
+  top: 370px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer3-border-r{
+  position: absolute;
+  top: 590px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer4-border-r{
+  position: absolute;
+  top: 740px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer5-border-r{
+  position: absolute;
+  top: 1045px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer6-border-r{
+  position: absolute;
+  top: 1978px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
