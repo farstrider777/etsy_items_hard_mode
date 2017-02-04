@@ -1,9 +1,12 @@
 /*
-Use the items variable to write a function for each question that gives the answer.
-Using the innerHTML() method, place your answers in the correct part of the index.html file.
-Make your index.html page look just like the mockup.png (shouldn't be too bad).
-Make sure the output matches the answers below each question.
-Make sure to comment your code as you walk through your though process.
+Hard Mode
+
+Write an additional function for each answer that uses whatever higher order functions you need.
+
+forEach
+map
+filter
+reduce
 */
 
 //Show me how to calculate the average price of all items.
@@ -17,15 +20,15 @@ function roundToCents(rawPrice){
 // to get the entire element and set it = to javascript varible
 var jAnswer1 = document.getElementById("answer1");
 
-//gets each object in the array drills down to the value stored in the price key
+//gets each object in the array with forEach method drills down to the value stored in the price key
 //adds each of the values together and divides by items.length to get average
+
 function calcAverPrice(){
-  var total = 0
-  for (var count = 0; count < items.length; count++) {
-    total += items[count].price
-    }
-  return total / items.length
+  var sum = 0
+  items.forEach(function (i) {sum += i.price})
+  return sum / items.length
 }
+
 
 // displays rounded average onscreen with a nice dollar sign
 jAnswer1.innerHTML = "The average price is $" + roundToCents(calcAverPrice());
