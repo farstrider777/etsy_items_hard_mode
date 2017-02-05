@@ -168,14 +168,4 @@ How many items were made by their sellers?
 
 jAnswer6 = document.getElementById("answer6");
 
-function itemsMadeByS(){
-  var icount = 0;
-  for(var count = 0; count < items.length; count++){
-    if(items[count].who_made === "i_did"){
-      icount++;
-    }
-  }
-  jAnswer6.innerHTML = icount + " were made by their sellers"
-}
-
-itemsMadeByS();
+jAnswer6.innerHTML = items.filter(function (i){return i.who_made === "i_did"}).length + " were made by their sellers";
