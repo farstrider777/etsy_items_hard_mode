@@ -137,49 +137,35 @@ Which items are made of eight or more materials? Display the name, number of ite
   personalized harry potter glass
 */
 
-//checks all items to see if the number of materials is greater than or equal to 8
-// and then pushes each of those items to an array and returns that array
-// also puts values in an array that holds index values of which items have more than 8 materials
-var itemIndexValues = []
-
-function checkNumMat(){
-  items8Mat = [];
-  for (var count = 0; count < items.length; count++) {
-    if(items[count].materials.length >= 8){
-      items8Mat.push(items[count]);
-      itemIndexValues.push(count);
-    }
-  }
-  return items8Mat;
-}
-
 // stores element to javascript variable
 var jAnswer5 = document.getElementById("answer5");
 
-
-// takes an item index and uses that to print the materials that item is made out of to the HTML
-function printMat(whichItem){
+// takes items at an index and uses that to print the materials that item is made out of to the HTML
+function printMaterials(whichItem){
   for (var count = 0; count < items[whichItem].materials.length; count++){
     jAnswer5.innerHTML += "<P>" + items[whichItem].materials[count] + "</P>"
   }
 }
 
-
-// uses checkNumMat to find the items that have 8 or more materials then prints the
-// first one to the html then runs printMat to print the materirals those items are made from
-for (var count = 0; count < checkNumMat().length; count++){
-  jAnswer5.innerHTML += "<P>" + checkNumMat()[count].title  + " has " + checkNumMat()[count].materials.length + " materials:" + "</P>";
-  printMat(itemIndexValues[count]);
+// check for if an item has 8 or more matierials
+function has8orMoreMaterials(i){
+  return i.materials.length >= 8
 }
 
-
-
-
+// loops through each item, passes has8orMoreMaterials to the map function
+//which creates a new array of just true or false for each items at count then writes the title and the materials for each true one.
+for(count = 0; count < items.length; count++){
+  if(items.map(has8orMoreMaterials)[count]){
+    jAnswer5.innerHTML += "<P>" + items[count].title  + " has " + items[count].materials.length + " materials:</P>";
+    printMaterials(count)
+  }
+}
 
 /*
 How many items were made by their sellers?
   18 were made by their sellers
 */
+
 jAnswer6 = document.getElementById("answer6");
 
 function itemsMadeByS(){
