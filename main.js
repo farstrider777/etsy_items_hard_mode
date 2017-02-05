@@ -43,24 +43,25 @@ jAnswer1.innerHTML = "The average price is $" + roundToCents(calcAverPrice());
 
 var items14To18bucks = []; // initalize array to be filled with 14 to 18 dollar items
 
-function createArray14To18(){
-  var items14To18bucks = []; // initalize array to be filled with 14 to 18 dollar items
-  for (var count = 0; count < items.length; count++) {
-      if(items[count].price < 18 && items[count].price > 14){ // checks each items price
-        items14To18bucks.push(items[count].title);            // adds it to array if it meets criteria
-      }
-    }
-  return items14To18bucks  // returns the array of items that meet the requirements
+// function to be passed to the filter method. tells it which items to filter
+function check(i){
+  return (i.price < 18 && i.price > 14)
 }
 
+//uses higher order function filter to create new array
+function createArray14To18(){
+  items14To18bucks = items.filter(check)
+}
 
+//calls function
+createArray14To18();
 
 // to get the entire element and set it = to javascript varible
 var jTitle = document.getElementById("answer2");
 
 //loops through array and prints to html with paragraph breaks
-for(var count = 0; count < createArray14To18().length; count++){
-  jTitle.innerHTML += "<P>" + createArray14To18()[count] + "</P>";
+for(var count = 0; count < items14To18bucks.length; count++){
+  jTitle.innerHTML += "<P>" + items14To18bucks[count].title + "</P>";
 }
 
 
