@@ -20,9 +20,8 @@ function roundToCents(rawPrice){
 // to get the entire element and set it = to javascript varible
 var jAnswer1 = document.getElementById("answer1");
 
-//gets each object in the array with forEach method drills down to the value stored in the price key
-//adds each of the values together and divides by items.length to get average
-
+//gets each object in the array with forEach method
+//uses annoymous fuction to add each the to a sum variable then divides by total items and returns avg
 function calcAverPrice(){
   var sum = 0
   items.forEach(function (i) {sum += i.price})
@@ -68,18 +67,13 @@ for(var count = 0; count < items14To18bucks.length; count++){
 /*Which item has a "GBP" currency code? Display it's name and price.
   1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18 */
 
+var arrayGBP = [];
 
-  function checkGbp(){
-    for (var count = 0; count < items.length; count++) {
-      if(items[count].currency_code === "GBP"){
-        return items[count]
-      }
-    }
-  }
+arrayGBP = items.filter(function (i) {return i.currency_code === "GBP"})
 
 var jAnswer3 = document.getElementById("answer3")
 
-jAnswer3.innerHTML = checkGbp().title + " costs &pound" + checkGbp().price;
+jAnswer3.innerHTML = arrayGBP[0].title + " costs &pound" + arrayGBP[0].price;
 
 
 /*
