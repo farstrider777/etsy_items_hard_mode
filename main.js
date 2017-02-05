@@ -47,7 +47,7 @@ function check(i){
   return (i.price < 18 && i.price > 14)
 }
 
-//uses higher order function filter to create new array
+//uses the higher order function filter to create new array
 function createArray14To18(){
   items14To18bucks = items.filter(check)
 }
@@ -90,36 +90,21 @@ Display a list of all items who are made of wood.
 */
 
 
-//function to check each array of materials to see if it has wood in it
-function searchArrayForWood(arrayToCheck){
-  for(var count = 0; count < arrayToCheck.length; count++){
-    if(arrayToCheck[count] === "wood"){return true;}
-  }
-  return false
-}
 
-
-//function to send the array of materials from each object to the searchArrayForWood function
-// and then return an array of the objects that do have wood.
-function checkWood(){
-  var objectsWithWood = [];
-  for (var count = 0; count < items.length; count++) {
-    if(searchArrayForWood(items[count].materials)){
-      objectsWithWood.push(items[count]);
-    }
-  }
-  return objectsWithWood;
-}
 
 var jAnswer4 = document.getElementById("answer4") //sets jAnswer 4 to the correct element
 
-// prints the wooden items to the screen in individual paragraphs
-for(var count = 0; count < checkWood().length; count++){
-  jAnswer4.innerHTML += "<P>" + checkWood()[count].title + " is made of wood." + "</P>";
+
+// old code 15 lines new code seven!!! :)
+function isMadeOfWood(item){
+  return item === "wood"
 }
 
-
-
+for(var count = 0; count < items.length; count++){
+  if("wood" === items[count].materials.filter(isMadeOfWood)[0]){
+    jAnswer4.innerHTML += "<P>" + items[count].title + " is made of wood. </P>"
+  }
+}
 
 
 /*
