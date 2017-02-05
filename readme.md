@@ -1,4 +1,4 @@
-###Took a flattened image called simple pages and turned it into a functioning website.###
+###Copied a mockup and outputted selected information from an attached data file to the appropriate spots###
 
 Skills practiced
 
